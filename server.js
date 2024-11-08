@@ -4,21 +4,20 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+const password = encodeURIComponent("HTAobTAFd1txFcEeZQWusaTgdTT0U62T");
+const connectionString = `postgresql://i2u_db_user:${password}@dpg-csmt0u1u0jms73fsvgrg-a.oregon-postgres.render.com/i2u_db`;
+
 const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  password: "mithiGarrix@1405",
-  database: "i2u_db",
+  connectionString: connectionString,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
-client.connect((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("Connected to postgres");
-  }
-});
+client
+  .connect()
+  .then(() => console.log("Connected to PostgreSQL database"))
+  .catch((err) => console.error("Database connection error:", err));
 
 app.get("/getPost", async (req, res) => {
   try {
