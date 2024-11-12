@@ -2,10 +2,11 @@ const { Client } = require("pg");
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 app.use(cors());
 
-const password = encodeURIComponent("HTAobTAFd1txFcEeZQWusaTgdTT0U62T");
-const connectionString = `postgresql://i2u_db_user:${password}@dpg-csmt0u1u0jms73fsvgrg-a.oregon-postgres.render.com/i2u_db`;
+const connectionString = process.env.DATABASE_URL;
 
 const client = new Client({
   connectionString: connectionString,
@@ -26,11 +27,16 @@ app.get("/getPost", async (req, res) => {
     if (rows.length === 0) {
       return res.status(400).json({ message: "No posts found" });
     }
-    const posts = rows.map(function (row) {
+    const sortedRows = rows.sort(
+      (a, b) =>
+        new Date(b.post_published_date) - new Date(a.post_published_date)
+    );
+
+    const posts = sortedRows.map(function (row) {
       const dateString = row.post_published_date.toString();
       const month = dateString.split(" ")[1];
       const date = dateString.split(" ")[2];
-      const final_date = month + " " + date;
+      const final_date = `${month} ${date}`;
       return {
         id: row.post_id,
         title: row.post_title,
@@ -51,6 +57,6 @@ app.get("/getPost", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server started on port 5000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server started on port ${process.env.PORT}`);
 });
