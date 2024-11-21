@@ -1,0 +1,63 @@
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 12:50:54"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 12:50:55"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 12:52:19"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 12:52:21"}
+{"category":"startup","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-20 12:52:43","title":"The Rise of Corporate Accelerators: A New Player in the Game"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-20 12:52:44"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 12:54:33"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 12:54:35"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 12:54:36"}
+{"category":"mentors","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-20 12:56:33","title":"// Handle unhandled promise rejections"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-20 12:56:33"}
+{"category":"mentors","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-20 12:56:50","title":"// Handle unhandled promise rejections"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-20 12:56:51"}
+{"category":"startup","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-20 13:18:59","title":"NEW post test title"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-20 13:18:59"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 13:23:50"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 13:23:52"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 13:24:02"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 13:24:03"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 13:24:11"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 13:24:12"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 14:39:34"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 14:39:35"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 14:41:01"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 14:41:03"}
+{"category":"startup","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-20 14:50:22","title":"The Apple Story: From Garage Band to Global Giant"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-20 14:50:23"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 15:27:24"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 15:27:25"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-20 20:45:09"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-20 20:45:10"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 10:52:16"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 10:52:17"}
+{"category":"startup","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 10:57:14","title":"New UX Trend"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 10:57:14"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:03:38"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:03:39"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:14:53"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:14:55"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:14:56"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:14:58"}
+{"category":"startup","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 11:18:17","title":"New UX Trend"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 11:18:18"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:21:11"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:21:12"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:22:56"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:22:57"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:23:41"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:23:42"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:23:43"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:24:09"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:24:11"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:24:12"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 11:24:22"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 11:24:23"}
+{"category":"startup","imageUrl":"/uploads/image-1732168488789-382207279.jpeg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 11:24:48","title":"new title"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 11:24:49"}
+{"category":"startup","imageUrl":"/uploads/image-1732168599837-461804481.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 11:26:39","title":"The Climate Tech Startup: Addressing Global Challenges"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 11:26:40"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-21 12:19:42"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 12:19:43"}
+{"category":"startup","imageUrl":"/uploads/image-1732173294729-89550656.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 12:44:54","title":"The Apple Story: From Garage Band to Global Giant"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 12:44:55"}
