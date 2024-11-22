@@ -61,3 +61,22 @@
 {"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-21 12:19:43"}
 {"category":"startup","imageUrl":"/uploads/image-1732173294729-89550656.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-21 12:44:54","title":"The Apple Story: From Garage Band to Global Giant"}
 {"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-21 12:44:55"}
+{"level":"error","message":"Uncaught Exception: Connection terminated unexpectedly","service":"posts-service","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\client.js:131:73)\n    at Object.onceWrapper (node:events:633:28)\n    at Connection.emit (node:events:519:28)\n    at Socket.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\connection.js:62:12)\n    at Socket.emit (node:events:531:35)\n    at TCP.<anonymous> (node:net:337:12)","timestamp":"2024-11-22 11:13:02"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:18:19"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:18:21"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:23:29"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:23:30"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:25:15"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:25:17"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:25:18"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:25:19"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:25:21"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:25:22"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:25:25"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:25:26"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:25:31"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:25:32"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 11:26:01"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 11:26:02"}
+{"category":"startup","imageUrl":"/uploads/image-1732255279365-339795273.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-22 11:31:21","title":"The Role of Startups in Economic Growth"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-22 11:31:21"}

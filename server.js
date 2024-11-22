@@ -5,10 +5,11 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const multer = require("multer");
 const path = require("path");
+const fs = require('fs');
 const { createLogger, format, transports } = require("winston");
 dotenv.config();
 
-// Configure Winston logger
+
 const logger = createLogger({
   format: format.combine(
     format.timestamp({
@@ -51,10 +52,20 @@ client.connect((err) => {
   }
 });
 
-// Configure multer for image uploads
+
+const uploadDir = process.env.NODE_ENV === 'production'
+  ? '/tmp/uploads'  // Use /tmp directory in production (Render.com)
+  : path.join(__dirname, '../frontend/public/uploads');
+
+
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../frontend/public/uploads/'));
+    cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -65,7 +76,7 @@ const storage = multer.diskStorage({
 const upload = multer({ 
   storage: storage,
   limits: {
-    fileSize: 5 * 1024 * 1024 // 5MB limit
+    fileSize: 5 * 1024 * 1024 
   },
   fileFilter: function (req, file, cb) {
     const filetypes = /jpeg|jpg|png|gif/;
@@ -80,7 +91,7 @@ const upload = multer({
 });
 
 // Serve uploaded files statically
-app.use('/uploads', express.static(path.join(__dirname, '../frontend/public/uploads')));
+app.use('/uploads', express.static(uploadDir));
 
 app.get("/getPost", async (req, res) => {
   try {
