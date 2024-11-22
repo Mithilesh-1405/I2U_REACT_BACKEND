@@ -54,7 +54,7 @@ client.connect((err) => {
 
 
 const uploadDir = process.env.MODE === 'production'
-  ? '/tmp/uploads'  
+  ? '/tmp/uploads'
   : path.join(__dirname, '../frontend/public/uploads');
 
 
@@ -73,10 +73,10 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ 
+const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 5 * 1024 * 1024 
+    fileSize: 5 * 1024 * 1024
   },
   fileFilter: function (req, file, cb) {
     const filetypes = /jpeg|jpg|png|gif/;
@@ -111,6 +111,7 @@ app.get("/getPost", async (req, res) => {
       const dateString = row.post_published_date.toString();
       const month = dateString.split(" ")[1];
       const date = dateString.split(" ")[2];
+      const time = dateString.split(" ")[4]; // Get the time portion
       const final_date = `${month} ${date}`;
       return {
         id: row.post_id,
@@ -133,7 +134,7 @@ app.get("/getPost", async (req, res) => {
   }
 });
 
-// Image upload endpoint
+
 app.post('/uploadImage', upload.single('image'), async (req, res) => {
   try {
     if (!req.file) {
@@ -157,16 +158,17 @@ app.post("/publishPost", async(req,res)=>{
       logger.warn('Missing required fields in request body');
       return res.status(400).json({ error: "Missing required fields" });
     }
-    
+
     const now = new Date();
     const istTime = new Date(now.getTime() + (330 * 60000));
+    // Format date with time in HH:MM:SS format
     const formattedDateTime = istTime.toISOString().slice(0, 19).replace('T', ' ');
     const content_type = 'markup';
-    
+
     // Save the complete URL to the database
     const query = `INSERT INTO POSTS(post_page, post_title, post_published_date, post_content, post_content_type, post_image_url) VALUES($1, $2, $3, $4, $5, $6)`;
     const values = [formData.category, formData.title, formattedDateTime, content, content_type, imageUrl];
-    
+
     logger.info('Attempting to insert new post', {
       category: formData.category,
       title: formData.title,
