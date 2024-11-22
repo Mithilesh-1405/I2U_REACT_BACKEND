@@ -53,8 +53,8 @@ client.connect((err) => {
 });
 
 
-const uploadDir = process.env.NODE_ENV === 'production'
-  ? '/tmp/uploads'  // Use /tmp directory in production (Render.com)
+const uploadDir = process.env.MODE === 'production'
+  ? '/tmp/uploads'  
   : path.join(__dirname, '../frontend/public/uploads');
 
 
