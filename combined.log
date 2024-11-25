@@ -108,3 +108,24 @@
 {"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-22 12:01:33"}
 {"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-22 12:15:24"}
 {"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-22 12:15:25"}
+{"level":"error","message":"Uncaught Exception: Connection terminated unexpectedly","service":"posts-service","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\client.js:131:73)\n    at Object.onceWrapper (node:events:633:28)\n    at Connection.emit (node:events:519:28)\n    at Socket.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\connection.js:62:12)\n    at Socket.emit (node:events:531:35)\n    at TCP.<anonymous> (node:net:337:12)","timestamp":"2024-11-23 12:45:08"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-23 12:56:51"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-23 12:56:53"}
+{"level":"error","message":"Uncaught Exception: Connection terminated unexpectedly","service":"posts-service","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\client.js:131:73)\n    at Object.onceWrapper (node:events:633:28)\n    at Connection.emit (node:events:519:28)\n    at Socket.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\connection.js:62:12)\n    at Socket.emit (node:events:531:35)\n    at TCP.<anonymous> (node:net:337:12)","timestamp":"2024-11-23 21:56:49"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-23 21:57:17"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-23 21:57:18"}
+{"category":"startup","imageUrl":"/uploads/image-1732379460176-479357618.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-23 22:01:00","title":"Mastering Financial Forecasting: Avoiding Errors in the Growth and Scaling Phase"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-23 22:01:00"}
+{"category":"startup","imageUrl":"/uploads/image-1732379919198-299653256.jpg","level":"info","message":"Attempting to insert new post","service":"posts-service","timestamp":"2024-11-23 22:08:39","title":"Hello"}
+{"level":"info","message":"Post published successfully","service":"posts-service","timestamp":"2024-11-23 22:08:39"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-24 13:49:49"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-24 13:49:50"}
+{"level":"error","message":"Uncaught Exception: Connection terminated unexpectedly","service":"posts-service","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\client.js:131:73)\n    at Object.onceWrapper (node:events:633:28)\n    at Connection.emit (node:events:519:28)\n    at Socket.<anonymous> (G:\\i2u_react\\backend\\node_modules\\pg\\lib\\connection.js:62:12)\n    at Socket.emit (node:events:531:35)\n    at TCP.<anonymous> (node:net:337:12)","timestamp":"2024-11-24 15:36:39"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-24 15:37:05"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-24 15:37:06"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-24 20:49:26"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-24 20:49:28"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-24 20:52:38"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-24 20:52:39"}
+{"level":"info","message":"Server started on port 5000","service":"posts-service","timestamp":"2024-11-25 11:11:59"}
+{"level":"info","message":"Connected to database successfully","service":"posts-service","timestamp":"2024-11-25 11:12:00"}
