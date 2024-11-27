@@ -35,33 +35,91 @@ const logger = createLogger({
 app.use(cors());
 app.use(express.json());
 
-const connectionString = process.env.DATABASE_URL;
+
+console.log('Database Connection Config:', {
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
+
+  passwordLength: process.env.DB_PASSWORD ? process.env.DB_PASSWORD.length : 0
+});
 
 const client = new Client({
-  connectionString: connectionString,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: parseInt(process.env.DB_PORT),
+  database: process.env.DB_NAME,
+  ssl: true
 });
 
 client.connect((err) => {
   if (err) {
-    logger.error('Error connecting to database:', err);
+    console.error('Database Connection Error Details:');
+    console.error('Error Code:', err.code);
+    console.error('Error Message:', err.message);
+    console.error('Error Stack:', err.stack);
+
+    if (err.code === '28P01') {
+      console.error('Authentication failed. Please check username and password.');
+    } else if (err.code === 'ECONNREFUSED') {
+      console.error('Connection refused. Please check if:');
+      console.error('1. PostgreSQL is running');
+      console.error('2. The host and port are correct');
+      console.error('3. PostgreSQL is configured to accept connections');
+    } else if (err.code === 'ENOTFOUND') {
+      console.error('Host not found. Please check:');
+      console.error('1. The hostname is correct');
+      console.error('2. DNS resolution is working');
+      console.error('3. No typos in the host configuration');
+    }
+
+    logger.error('Database connection error:', {
+      error: {
+        code: err.code,
+        message: err.message,
+        stack: err.stack,
+        timestamp: new Date().toISOString(),
+        connectionConfig: {
+          user: process.env.DB_USER,
+          host: process.env.DB_HOST,
+          port: process.env.DB_PORT,
+          database: process.env.DB_NAME,
+          ssl: false
+        }
+      }
+    });
   } else {
-    logger.info('Connected to database successfully');
+    console.log('Successfully connected to PostgreSQL database');
+    logger.info('Database connected successfully', {
+      timestamp: new Date().toISOString(),
+      database: process.env.DB_NAME,
+      host: process.env.DB_HOST
+    });
   }
 });
 
+// Add error handler for connection loss
+client.on('error', (err) => {
+  console.error('Unexpected database error:', err.message);
+  logger.error('Unexpected database error:', {
+    error: {
+      code: err.code,
+      message: err.message,
+      stack: err.stack,
+      timestamp: new Date().toISOString()
+    }
+  });
+});
 
 const uploadDir = process.env.MODE === 'production'
   ? '/tmp/uploads'
   : path.join(__dirname, '../frontend/public/uploads');
 
-
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
-
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -92,7 +150,9 @@ const upload = multer({
 
 // Serve uploaded files statically
 app.use('/uploads', express.static(uploadDir));
-
+app.get("/",(req,res)=>{
+  res.send("Hello this is backend ")
+})
 app.get("/getPost", async (req, res) => {
   try {
     const { page } = req.query;
@@ -133,7 +193,6 @@ app.get("/getPost", async (req, res) => {
       .json({ message: "An error occurred while fetching posts" });
   }
 });
-
 
 app.post('/uploadImage', upload.single('image'), async (req, res) => {
   try {
